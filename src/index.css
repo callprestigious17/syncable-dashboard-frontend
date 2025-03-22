@@ -5,48 +5,48 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222 47% 11%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
-
-    --primary: 210 100% 50%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    
+    --primary: 217 91.2% 59.8%;
     --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222 47% 11%;
-
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 20% 65%;
-
-    --accent: 210 40% 96%;
-    --accent-foreground: 222 47% 11%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 222 84% 5%;
-
+    
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    
     --radius: 0.5rem;
 
-    --sidebar-background: 210 40% 98%;
-    --sidebar-foreground: 222 47% 11%;
-    --sidebar-primary: 210 100% 50%;
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91.2% 59.8%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 40% 96%;
-    --sidebar-accent-foreground: 222 47% 11%;
-    --sidebar-border: 214 32% 91%;
-    --sidebar-ring: 210 100% 50%;
+    --sidebar-accent: 217 91.2% 59.8%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217 91.2% 59.8%;
   }
 
   * {
-    @apply border-border;
+    @apply border-border selection:bg-primary/20 selection:text-foreground;
   }
 
   body {
@@ -56,28 +56,23 @@
 
   /* TaskSync Custom Styles */
   .team-card {
-    @apply bg-white rounded-lg p-4 border border-border transition-all duration-200 hover:shadow-md cursor-pointer mb-2;
+    @apply bg-card/50 rounded-lg p-4 border border-border transition-all duration-200 hover:shadow-md hover:bg-card/80 cursor-pointer mb-2;
   }
 
   .task-card {
-    @apply bg-white rounded-lg border border-border p-4 shadow-sm transition-all duration-200 hover:shadow-md;
+    @apply bg-card/50 rounded-lg border border-border p-4 shadow-sm transition-all duration-200 hover:shadow-md hover:bg-card/80;
   }
 
   .task-column {
-    @apply bg-secondary rounded-lg p-4 min-h-[60vh] flex flex-col;
-  }
-  
-  /* TaskSync Animations */
-  .animate-enter {
-    animation: fade-in 0.3s ease-out forwards, scale-in 0.2s ease-out forwards;
-  }
-  
-  .animate-exit {
-    animation: fade-out 0.3s ease-out forwards;
+    @apply bg-secondary/50 rounded-lg p-4 min-h-[60vh] flex flex-col;
   }
   
   /* Glass morphism effect */
   .glass {
-    @apply bg-white/70 backdrop-blur-lg border border-white/20;
+    @apply bg-card/30 backdrop-blur-lg border border-white/10 shadow-xl;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
   }
 }
